@@ -24,36 +24,11 @@ article h2{margin:4px 0 8px;font-size:1.4rem;line-height:1.3}.meta{font-size:.8r
 textarea{width:100%;min-height:140px;background:var(--bg);color:var(--tx);border:1px solid var(--bd);border-radius:10px;padding:12px;font-size:.85rem}
 pre{white-space:pre-wrap;background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:14px;font-size:.82rem;line-height:1.5;overflow-x:auto}
 ol li{margin-bottom:6px}.hide{display:none}.msg{font-family:system-ui,sans-serif;font-size:.85rem;color:var(--ac);margin-top:8px}
-:root{--g1:#2f5d50;--g2:#c98b3a}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--g1:#7fc4ae;--g2:#e0a95a}}
-body{background:radial-gradient(900px 400px at 85% -50px,color-mix(in srgb,var(--g2) 18%,transparent),transparent),radial-gradient(800px 380px at -10% 0,color-mix(in srgb,var(--g1) 16%,transparent),transparent),var(--bg)}
-h1{background:linear-gradient(90deg,var(--g1),var(--g2));-webkit-background-clip:text;background-clip:text;color:transparent;width:fit-content}
-#bar{position:fixed;left:0;top:env(safe-area-inset-top,0px);height:3px;width:0;background:linear-gradient(90deg,var(--g1),var(--g2));z-index:20}
-.hero{text-align:center;padding:26px 4px 34px}
-.badge{display:inline-block;font:600 .75rem system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;background:var(--ac2);color:var(--ac);padding:5px 12px;border-radius:999px}
-.hero h2{font-size:clamp(1.8rem,6vw,2.7rem);line-height:1.12;margin:14px 0 12px}
-.hero p{color:var(--mu);max-width:560px;margin:0 auto 22px}
-.hero .row{justify-content:center}
-.big{padding:12px 22px;font-size:1rem;font-weight:600}
-.btn.p{box-shadow:0 6px 18px color-mix(in srgb,var(--g1) 35%,transparent)}
-.btn{transition:transform .15s,box-shadow .15s}.btn:hover{transform:translateY(-2px)}
-.stats{display:flex;justify-content:center;gap:28px;margin-top:28px;flex-wrap:wrap}
-.stats div{font-family:system-ui,sans-serif;display:flex;flex-direction:column;align-items:center}
-.stats b{font-size:1.9rem;color:var(--ac);line-height:1.1}.stats span{font-size:.78rem;color:var(--mu)}
-article{transition:box-shadow .25s,border-color .25s}article:hover{box-shadow:0 14px 34px rgba(0,0,0,.1);border-color:var(--ac)}
-#blog>article:first-child{border:2px solid transparent;background:linear-gradient(var(--card),var(--card)) padding-box,linear-gradient(120deg,var(--g1),var(--g2)) border-box}
-#blog>article:first-child h2{font-size:1.75rem}
-.rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
-.cta{margin-top:10px;padding:34px 22px;border-radius:20px;text-align:center;color:#fff;background:linear-gradient(135deg,#2f5d50,#1d3b33)}
-.cta h3{font-size:1.5rem;margin:0 0 8px}.cta p{margin:0 auto 18px;max-width:480px;color:rgba(255,255,255,.85)}
-.cta .row{justify-content:center}.cta .btn{background:#fff;color:#1d3b33;border-color:#fff;font-weight:600}
 </style>
 </head>
-<body><div id="bar"></div><div class="w">
-<header><div class="tabs" id="lang" style="margin-top:0"><button data-l="uk">Українська</button><button data-l="en">English</button></div><h1 id="ttl">Навчання майбутнього</h1><p id="sub">Педагогіка, яка оновлює себе: нотатки про самооновлювані курси, ШІ та роль методиста.</p></header>
-<section class="hero"><span class="badge" id="hb"></span><h2 id="ht"></h2><p id="hx"></p><div class="row"><button class="btn p big" id="hc1"></button><button class="btn big" id="hc2"></button></div><div class="stats"><div><b id="n1"></b><span id="s1"></span></div><div><b>7</b><span id="s2"></span></div><div><b>2</b><span id="s3"></span></div></div></section>
-<nav><button class="on" data-v="blog" id="nb">Публікації</button><button data-v="upd" id="nu">Автооновлення</button></nav>
+<body><div class="w">
+<header><h1>Навчання майбутнього</h1><p>Педагогіка, яка оновлює себе: нотатки про самооновлювані курси, ШІ та роль методиста.</p></header>
+<nav><button class="on" data-v="blog">Публікації</button><button data-v="upd">Автооновлення</button></nav>
 
 <section id="blog"></section>
 
@@ -90,9 +65,9 @@ article{transition:box-shadow .25s,border-color .25s}article:hover{box-shadow:0 
 
 <script type="application/json" id="posts">
 [
-{"id":"selfupdating-course","date":"2026-11-20","title":"Курс, який оновлює себе сам","summary":"Структура сучасного курсу — це не статичний документ, а добре сформульований запит до ШІ, що запускається за графіком.","points":["Запит має стабільну основу: цілі навчання, методичні принципи, вимоги до результатів, стандарти галузі.","Після кожного запуску ШІ аналізує зміни у професії та звіряє курс із чинними нормативами.","Він пропонує оновлення й позначає, які матеріали застаріли та чому."],"body":["Структура сучасного курсу може бути не документом, який хтось вручну переглядає раз на кілька років, а запитом до штучного інтелекту. Цей запит автоматично запускається щомісяця, раз на пів року чи раз на рік.","Сам запит поступово уточнюється, але його базова логіка стала: цілі навчання, методичні принципи, вимоги до результатів і стандарти відповідної галузі.","Так виникає конвеєр розроблення курсів. На вході — правила, джерела, методика й періодичний запит. Усередині — аналіз та підготовка змін. На виході — оновлена версія курсу з поясненням усіх змін."],"question":"Як часто ваш курс справді переглядають і що саме перевіряють?","tags":["освіта","ШІ","курси","методика"],"en":{"title":"A course that updates itself","summary":"A modern course structure does not have to be a static document. It can be a well-crafted prompt to an AI that runs on a schedule.","points":["The prompt has a stable core: learning goals, methodological principles, outcome requirements and industry standards.","After each run, the AI analyses what has changed in the profession and checks the course against current regulations.","It proposes updates and flags which materials are outdated and why."],"body":["A modern course structure can be not a document that someone reviews by hand every few years, but a prompt to an AI. The prompt runs automatically: monthly, twice a year or yearly.","The prompt itself is refined over time, but its core logic stays fixed: learning goals, methodological principles, outcome requirements and the standards of the field.","The result is a course-development pipeline. Input: rules, sources, methodology and a periodic prompt. Inside: analysis and preparation of changes. Output: an updated course version with every change explained."],"question":"How often is your course really reviewed, and what exactly is checked?","tags":["education","AI","courses","methodology"]}},
-{"id":"human-role","date":"2026-11-20","title":"Роль людини стає важливішою, а не меншою","summary":"ШІ стежить за змінами й готує оновлення, але професійне рішення залишається за відповідальною людиною.","points":["Людина визначає початкову структуру, принципи навчання й критерії якості.","Людина затверджує запропоновані зміни.","За основу беруться офіційні вимоги та методичні матеріали відповідної галузі."],"body":["Автоматизація не прибирає методиста з процесу. Керівник академії задає початкову структуру, принципи й критерії якості та затверджує зміни.","Для курсу з цивільного захисту основою стають офіційні вимоги й методичні матеріали ДСНС. Для військової підготовки — відповідні стандарти, доктрина та рекомендації військових.","Головна перевага підходу в тому, що ми не наздоганяємо зміни вручну. Система регулярно перевіряє їх сама, тому курс не встигає суттєво застаріти."],"question":"Які рішення в навчанні ви б ніколи не делегували ШІ?","tags":["методист","якість","ШІ","відповідальність"],"en":{"title":"The human role becomes more important, not less","summary":"AI tracks changes and prepares updates, but the professional decision stays with a responsible person.","points":["The human defines the initial structure, the learning principles and the quality criteria.","The human approves the proposed changes.","Official requirements and methodological materials of the field serve as the foundation."],"body":["Automation does not remove the methodologist from the process. The head of the academy sets the initial structure, principles and quality criteria, and approves the changes.","For a civil protection course, the basis is the official requirements and methodological materials of the State Emergency Service. For military training, the relevant standards, doctrine and recommendations of the armed forces.","The main advantage is that we stop chasing change by hand. The system checks for it regularly, so the course does not have time to become seriously outdated."],"question":"Which decisions in education would you never delegate to AI?","tags":["methodologist","quality","AI","responsibility"]}},
-{"id":"first-test","date":"2026-11-20","title":"Один тестовий запит, один невеликий курс","summary":"Почніть із малого: оберіть коротку тему й сформулюйте запит, який перевіряє її актуальність.","points":["Опишіть цільову аудиторію та результат навчання.","Зафіксуйте базову структуру й методичні принципи.","Назвіть авторитетні джерела й попросіть знайти зміни за період.","Вимагайте обґрунтованих пропозицій без зміни затверджених принципів без окремого погодження."],"body":["Візьміть одну коротку тему або мінікурс і сформулюйте запит із п’яти частин: аудиторія й результат, структура й принципи, джерела, пошук змін, обґрунтовані пропозиції.","Після першого запуску подивіться, що спрацювало, уточніть формулювання й поступово будуйте повноцінний конвеєр самооновлюваних матеріалів.","Кожна публікація в цьому блозі — теж невеличке дослідження й практика роботи з новою моделлю освіти."],"question":"Яку тему ви взяли б для першого тесту?","tags":["практика","промпт","мінікурс"],"en":{"title":"One test prompt, one small course","summary":"Start small: pick a short topic and write a prompt that checks whether it is still up to date.","points":["Describe the target audience and the learning outcome.","Fix the basic structure and methodological principles.","Name authoritative sources and ask for changes over the period.","Require justified proposals, and no change to approved principles without separate approval."],"body":["Take one short topic or mini-course and write a prompt in five parts: audience and outcome, structure and principles, sources, search for changes, justified proposals.","After the first run, see what worked, refine the wording and gradually build a full pipeline of self-updating materials.","Every post in this blog is also a small piece of research and practice with a new model of education."],"question":"Which topic would you pick for a first test?","tags":["practice","prompt","mini-course"]}}
+{"id":"selfupdating-course","date":"2026-11-20","title":"Курс, який оновлює себе сам","summary":"Структура сучасного курсу — це не статичний документ, а добре сформульований запит до ШІ, що запускається за графіком.","points":["Запит має стабільну основу: цілі навчання, методичні принципи, вимоги до результатів, стандарти галузі.","Після кожного запуску ШІ аналізує зміни у професії та звіряє курс із чинними нормативами.","Він пропонує оновлення й позначає, які матеріали застаріли та чому."],"body":["Структура сучасного курсу може бути не документом, який хтось вручну переглядає раз на кілька років, а запитом до штучного інтелекту. Цей запит автоматично запускається щомісяця, раз на пів року чи раз на рік.","Сам запит поступово уточнюється, але його базова логіка стала: цілі навчання, методичні принципи, вимоги до результатів і стандарти відповідної галузі.","Так виникає конвеєр розроблення курсів. На вході — правила, джерела, методика й періодичний запит. Усередині — аналіз та підготовка змін. На виході — оновлена версія курсу з поясненням усіх змін."],"question":"Як часто ваш курс справді переглядають і що саме перевіряють?","tags":["освіта","ШІ","курси","методика"]},
+{"id":"human-role","date":"2026-11-20","title":"Роль людини стає важливішою, а не меншою","summary":"ШІ стежить за змінами й готує оновлення, але професійне рішення залишається за відповідальною людиною.","points":["Людина визначає початкову структуру, принципи навчання й критерії якості.","Людина затверджує запропоновані зміни.","За основу беруться офіційні вимоги та методичні матеріали відповідної галузі."],"body":["Автоматизація не прибирає методиста з процесу. Керівник академії задає початкову структуру, принципи й критерії якості та затверджує зміни.","Для курсу з цивільного захисту основою стають офіційні вимоги й методичні матеріали ДСНС. Для військової підготовки — відповідні стандарти, доктрина та рекомендації військових.","Головна перевага підходу в тому, що ми не наздоганяємо зміни вручну. Система регулярно перевіряє їх сама, тому курс не встигає суттєво застаріти."],"question":"Які рішення в навчанні ви б ніколи не делегували ШІ?","tags":["методист","якість","ШІ","відповідальність"]},
+{"id":"first-test","date":"2026-11-20","title":"Один тестовий запит, один невеликий курс","summary":"Почніть із малого: оберіть коротку тему й сформулюйте запит, який перевіряє її актуальність.","points":["Опишіть цільову аудиторію та результат навчання.","Зафіксуйте базову структуру й методичні принципи.","Назвіть авторитетні джерела й попросіть знайти зміни за період.","Вимагайте обґрунтованих пропозицій без зміни затверджених принципів без окремого погодження."],"body":["Візьміть одну коротку тему або мінікурс і сформулюйте запит із п’яти частин: аудиторія й результат, структура й принципи, джерела, пошук змін, обґрунтовані пропозиції.","Після першого запуску подивіться, що спрацювало, уточніть формулювання й поступово будуйте повноцінний конвеєр самооновлюваних матеріалів.","Кожна публікація в цьому блозі — теж невеличке дослідження й практика роботи з новою моделлю освіти."],"question":"Яку тему ви взяли б для першого тесту?","tags":["практика","промпт","мінікурс"]}
 ]
 </script>
 
@@ -111,16 +86,10 @@ var PROMPT = [
 "3. Напиши одну публікацію про найважливіше з обґрунтуванням і практичним кроком для методиста.",
 "4. Не повторюй теми, які вже були: [СПИСОК id ВЖЕ ОПУБЛІКОВАНИХ].",
 "",
-"ДВОМОВНІСТЬ: додай до JSON поле en з тими самими полями (title, summary, points, body, question, tags), перекладеними англійською мовою.",
 "ФОРМАТ ВІДПОВІДІ: лише валідний JSON без пояснень і без блоків коду. Усередині рядків не використовуй прямих лапок, лише «ялинки».",
 "{\"id\":\"латиницею-через-дефіс\",\"date\":\"РРРР-ММ-ДД\",\"title\":\"до 70 символів\",\"summary\":\"1–2 речення\",\"points\":[\"3–4 ключові тези\"],\"body\":[\"3–5 абзаців\"],\"question\":\"питання до читачів\",\"tags\":[\"3–5 тегів\"]}"
 ].join("\n");
 
-var LANG="uk";try{LANG=localStorage.getItem("fl_lang")||"uk"}catch(e){}
-var I={uk:{ttl:"Навчання майбутнього",sub:"Педагогіка, яка оновлює себе: нотатки про самооновлювані курси, ШІ та роль методиста.",posts:"Публікації",upd:"Автооновлення",cp:"Копіювати для платформи",ok:"Скопійовано ✓",key:"У чому суть:",subj:"Тема: ",hi:"Добрий день!",n_blog:"Блог",n_tg:"Telegram",n_li:"LinkedIn",n_fb:"Facebook",n_ig:"Instagram",n_x:"X (серія)",n_em:"E-mail",h_b:"Освіта + ШІ",h_t:"Курси, які оновлюють себе самі",h_x:"Практичні нотатки для методистів і керівників академій: як перетворити курс на живу систему з одним запитом до ШІ.",h_c1:"Отримати шаблон запиту",h_c2:"Читати публікації",s1:"публікацій",s2:"форматів для платформ",s3:"мови",min:"хв читання",c_t:"Почніть із одного тестового запиту",c_x:"Скопіюйте готовий шаблон для оновлення курсу й перевірте його на одній короткій темі. Це займе кілька хвилин.",c_1:"Скопіювати шаблон",c_2:"Поділитися блогом"},
-en:{ttl:"The Future of Learning",sub:"Pedagogy that updates itself: notes on self-updating courses, AI and the role of the methodologist.",posts:"Posts",upd:"Auto-update (UA)",cp:"Copy for platform",ok:"Copied ✓",key:"Key points:",subj:"Subject: ",hi:"Hello!",n_blog:"Blog",n_tg:"Telegram",n_li:"LinkedIn",n_fb:"Facebook",n_ig:"Instagram",n_x:"X (thread)",n_em:"E-mail",h_b:"Education + AI",h_t:"Courses that update themselves",h_x:"Practical notes for methodologists and academy heads: how to turn a course into a living system with a single AI prompt.",h_c1:"Get the prompt template",h_c2:"Read the posts",s1:"posts",s2:"platform formats",s3:"languages",min:"min read",c_t:"Start with one test prompt",c_x:"Copy the ready-made course-update template and try it on one short topic. It takes a few minutes.",c_1:"Copy the template",c_2:"Share the blog"}};
-function t(k){return (I[LANG]&&I[LANG][k])||I.uk[k]||k}
-function view(p){return (LANG==="en"&&p.en)?Object.assign({},p,p.en):p}
 var base = JSON.parse(document.getElementById("posts").textContent);
 var KEY = "fl_extra_posts";
 function loadExtra(){try{return JSON.parse(localStorage.getItem(KEY)||"[]")}catch(e){return []}}
@@ -139,35 +108,31 @@ function thread(p){
 var FMT={
  blog:{n:"Блог",f:function(p){return p.title+"\n\n"+(p.body||[]).join("\n\n")}},
  tg:{n:"Telegram",f:function(p){return "📌 "+p.title+"\n\n"+p.summary+"\n\n"+bullets(p,"•")+"\n\n"+(p.question?"💬 "+p.question+"\n\n":"")+hs(p)}},
- li:{n:"LinkedIn",f:function(p){return p.title+"\n\n"+p.summary+"\n\n"+t("key")+"\n"+bullets(p,"→")+"\n\n"+(p.question||"")+"\n\n"+hs(p)}},
+ li:{n:"LinkedIn",f:function(p){return p.title+"\n\n"+p.summary+"\n\nУ чому суть:\n"+bullets(p,"→")+"\n\n"+(p.question||"")+"\n\n"+hs(p)}},
  fb:{n:"Facebook",f:function(p){return p.title+"\n\n"+p.summary+"\n\n"+(p.body||[])[0]+"\n\n"+(p.question||"")}},
  ig:{n:"Instagram",f:function(p){var s="✨ "+p.title+"\n\n"+p.summary+"\n\n"+bullets(p,"▪️")+"\n\n"+(p.question||"")+"\n\n"+hs(p);return s.slice(0,2200)}},
  x:{n:"X (серія)",f:thread},
- em:{n:"E-mail",f:function(p){return t("subj")+p.title+"\n\n"+t("hi")+"\n\n"+p.summary+"\n\n"+(p.body||[]).join("\n\n")+"\n\n"+(p.question||"")}}
+ em:{n:"E-mail",f:function(p){return "Тема: "+p.title+"\n\nДобрий день!\n\n"+p.summary+"\n\n"+(p.body||[]).join("\n\n")+"\n\n"+(p.question||"")}}
 };
 function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
 function copy(txt,btn){
-  var done=function(){var o=btn.textContent;btn.textContent=t("ok");setTimeout(function(){btn.textContent=o},1400)};
+  var done=function(){var o=btn.textContent;btn.textContent="Скопійовано ✓";setTimeout(function(){btn.textContent=o},1400)};
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done,function(){fb()})}else fb();
   function fb(){var t=el("textarea");t.value=txt;document.body.appendChild(t);t.select();try{document.execCommand("copy");done()}catch(e){}document.body.removeChild(t)}
 }
-function render(){renderPosts();addCta()}
-function rt(p){return Math.max(1,Math.ceil((p.body||[]).join(" ").split(/\s+/).length/180))}
-function reveal(){try{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.08});document.querySelectorAll(".rv").forEach(function(n){io.observe(n)})}catch(e){document.querySelectorAll(".rv").forEach(function(n){n.classList.add("in")})}}
-function addCta(){var h=document.getElementById("blog"),c=el("div","cta rv");c.appendChild(el("h3",null,t("c_t")));c.appendChild(el("p",null,t("c_x")));var r=el("div","row"),b1=el("button","btn",t("c_1")),b2=el("button","btn",t("c_2"));b1.onclick=function(){copy(PROMPT2,b1)};b2.onclick=function(){var u=location.href;if(navigator.share){navigator.share({title:t("ttl"),url:u}).catch(function(){})}else copy(u,b2)};r.appendChild(b1);r.appendChild(b2);c.appendChild(r);h.appendChild(c);reveal()}
-function renderPosts(){
+function render(){
   var host=document.getElementById("blog");host.textContent="";
-  all().forEach(function(p0){var p=view(p0);
-    var a=el("article","rv");
-    a.appendChild(el("div","meta",(p.date||"")+" · "+rt(p)+" "+t("min")));
+  all().forEach(function(p){
+    var a=el("article");
+    a.appendChild(el("div","meta",p.date||""));
     a.appendChild(el("h2",null,p.title));
     a.appendChild(el("p","sum",p.summary));
     var tg=el("div");(p.tags||[]).forEach(function(t){tg.appendChild(el("span","tag",t))});a.appendChild(tg);
     var tabs=el("div","tabs"),out=el("div","out"),cur="blog";
     function show(k){cur=k;out.textContent=FMT[k].f(p);Array.prototype.forEach.call(tabs.children,function(b){b.className=b.dataset.k===k?"on":""})}
-    Object.keys(FMT).forEach(function(k){var b=el("button",null,t("n_"+k));b.dataset.k=k;b.onclick=function(){show(k)};tabs.appendChild(b)});
+    Object.keys(FMT).forEach(function(k){var b=el("button",null,FMT[k].n);b.dataset.k=k;b.onclick=function(){show(k)};tabs.appendChild(b)});
     a.appendChild(tabs);a.appendChild(out);
-    var r=el("div","row"),c=el("button","btn p",t("cp"));c.onclick=function(){copy(out.textContent,c)};r.appendChild(c);a.appendChild(r);
+    var r=el("div","row"),c=el("button","btn p","Копіювати для платформи");c.onclick=function(){copy(out.textContent,c)};r.appendChild(c);a.appendChild(r);
     show("blog");host.appendChild(a);
   });
 }
@@ -220,22 +185,6 @@ document.getElementById("go").onclick=function(){
 };
 document.getElementById("exp").onclick=function(){copy(JSON.stringify(all(),null,1),this)};
 document.getElementById("clr").onclick=function(){extra=[];saveExtra(extra);render();msg.textContent="Імпортовані публікації видалено."};
-function applyLang(){
- document.documentElement.lang=LANG;document.title=t("ttl");
- document.getElementById("ttl").textContent=t("ttl");
- document.getElementById("sub").textContent=t("sub");
- document.getElementById("nb").textContent=t("posts");
- document.getElementById("nu").textContent=t("upd");
- var ids={hb:"h_b",ht:"h_t",hx:"h_x",hc1:"h_c1",hc2:"h_c2",s1:"s1",s2:"s2",s3:"s3"};Object.keys(ids).forEach(function(k){document.getElementById(k).textContent=t(ids[k])});
- document.getElementById("n1").textContent=all().length;
- Array.prototype.forEach.call(document.getElementById("lang").children,function(b){b.className=b.dataset.l===LANG?"on":""});
- render();
-}
-Array.prototype.forEach.call(document.getElementById("lang").children,function(b){b.onclick=function(){LANG=b.dataset.l;try{localStorage.setItem("fl_lang",LANG)}catch(e){}applyLang()}});
-document.getElementById("hc1").onclick=function(){copy(PROMPT2,this)};
-document.getElementById("hc2").onclick=function(){document.getElementById("nb").click();document.getElementById("blog").scrollIntoView({behavior:"smooth"})};
-window.addEventListener("scroll",function(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;document.getElementById("bar").style.width=(m>0?h.scrollTop/m*100:0)+"%"},{passive:true});
-applyLang();
 document.querySelectorAll("nav button").forEach(function(b){b.onclick=function(){
   document.querySelectorAll("nav button").forEach(function(x){x.className=x===b?"on":""});
   document.getElementById("blog").className=b.dataset.v==="blog"?"":"hide";
